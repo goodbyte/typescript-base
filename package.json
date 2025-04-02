@@ -5,15 +5,14 @@
   "type": "module",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "node --conditions=development --experimental-strip-types --no-warnings --env-file=.env --watch src/index.ts",
+    "dev": "tsx --conditions=development --env-file=.env --watch src/index.ts",
     "build": "npm run clean && tsc",
     "clean": "rimraf dist",
-    "typecheck": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "imports": {
     "#root/*": {
@@ -24,7 +23,7 @@
   "devDependencies": {
     "@types/node": "^22.13.4",
     "rimraf": "^6.0.1",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.3"
-  },
-  "dependencies": {}
+  }
 }
